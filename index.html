@@ -1,29 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
     <title>zmh</title>
 </head>
 <body>
-    <p>点击灯泡可以实现打开和关闭的功能</p>
-    <img onclick="changeImage()"  src="images/pic_bulboff.gif" width="100" height="180">
+    <h3>点击灯泡可以实现打开和关闭功能</h3>
+    <img  id="myimage"  onclick="changeImage()"   src="images/pic_bulboff.gif" width="100" height="180">
 
     <script>
         function changeImage(){
-            const element = document.getElementById("myimage");
+            alert("函数调用成功！");
+            const element = document.getElementById("myimage"); 
             let a = element.src.endsWith("pic_bulboff.gif");
             console.log(a);
-            if (element.src.endsWith("pic_bulboff.gif"))
+            if (element.src.endsWith("pic_bulboff.gif")) //判断灯泡关闭状态
             {
-                element.src = "images/pic_bulbon.gif";
-            } else
+                element.src = "images/pic_bulbon.gif"; //打开灯泡
+            } else 
             {
-                element.src = "images/pic_bulboff.gif";
-                document.write("灯泡已关闭")
+                element.src = "images/pic_bulboff.gif"; //关闭灯泡
             }
+
         }
-        
     </script>
 </body>
 </html>
